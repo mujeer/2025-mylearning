@@ -63,6 +63,18 @@ istiod-69d4df85cd-84tgq                1/1     Running   0          9m43s
 
 # kubectl label namespace default istio-injection=enabled 
 ^^ enabled lable to the default namespace 
+--> container istio proxy container is automtically run 
+
+# gather telemetry data 
+
+# istio integrations 
+https://istio.io/latest/docs/ops/integrations/
+
+C:\Users\mujee\Downloads\istio-1.25.0-rc.1-win-amd64\istio-1.25.0-rc.1\samples\addons
+^^ alredy addons are present in the dowunled page 
+
+
+
 
 
 
