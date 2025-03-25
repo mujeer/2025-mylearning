@@ -116,6 +116,24 @@ tacing
 
 # we can enable kubernetes in the docker cluster to enable in the docker disktop 
 
+# minikube start --driver=virtualbox --no-vtx-check --memory 4096
+
+# minikube delete 
+
+# kubectl port-forward svc/fleetman-webapp 30080:80
+
+127.0.0.1:30080 --> accessing the webapp
+
+Github repo: https://github.com/DickChesterwood/istio-fleetman
+
+# istioctl  --> this is the command 
+
+# kubectl apply -f .\1-istio-init.yaml 
+
+
+
+
+
 
 
 
