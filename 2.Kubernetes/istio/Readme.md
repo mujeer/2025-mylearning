@@ -30,7 +30,7 @@ Request --> Istio Gateway --> Virtual Service Rules --> Web server micro service
 3. Configure automatic Envoy proxy injection 
 4. Deploy an example microservices application 
 
-#minikube start --cpus 3 --memory 4000 
+# minikube start --cpus 3 --memory 4000 
 (change the capacify of the minikube )
 
 * Installing istioctl command 
@@ -73,8 +73,48 @@ https://istio.io/latest/docs/ops/integrations/
 C:\Users\mujee\Downloads\istio-1.25.0-rc.1-win-amd64\istio-1.25.0-rc.1\samples\addons
 ^^ alredy addons are present in the dowunled page 
 
+# kubectl apply -f addons/
 
+kiali --> data visualization 
 
+# kubectl port-forward svc/kiali -n istio-system 20001
+
+http://127.0.0.1:20001/ 
+
+# istioctl dashboard kiali 
+
+^^ to access the kiali 
+
+^^ we can access kiali in this URL 
+
+https://imesh.ai/blog/what-is-istio/
+https://github.com/imesh-ai/webinar 
+youtube channel : imesh , Cloud - Deep Tech 
+
+--------------------------------------------------------
+Istio: 
+
+--> is a service mesh 
+--> extra layer of the software micro services architectute 
+--> communication with pods in the kuberntes there is no any restrictions they can talk to any pod in the clster 
+--> network call to the pods 
+--> layer of the software 
+--> traffic  management and security 
+--> proxy container is sit in the every pod 
+
+container --> proxy --> istiod --> proxy --> container 
+
+1.5 version before there are many pods in the istio-system namespace they cloub all the pods into one that is istiod pod. 
+istiod --> deamon 
+kiali UI --> visualization 
+tacing 
+
+1. Install Dockerdisktop 
+2. Installing minikube 
+3. Installing kubectl 
+4. Installing istio 
+
+# we can enable kubernetes in the docker cluster to enable in the docker disktop 
 
 
 
