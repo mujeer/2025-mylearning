@@ -131,6 +131,40 @@ Github repo: https://github.com/DickChesterwood/istio-fleetman
 # kubectl apply -f .\1-istio-init.yaml 
 
 
+# minikube start --driver=docker --listen-address=0.0.0.0
+
+--> Istio virtual service timeout 
+
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: my-productpage-rule
+  namespace: istio-system
+spec:
+  hosts:
+  - productpage.prod.svc.cluster.local # ignores rule namespace
+  http:
+  - timeout: 5s
+    route:
+    - destination:
+        host: productpage.prod.svc.cluster.local
+
+Envoy sidecar proxy : 
+
+Container --> Proxy (side car container) 
+https://www.envoyproxy.io/ 
+
+Monitoring: kiali,jaeger and grafana 
+
+# minikube service kiali -n istio-system 
+
+^^ this command to access the node port 
+
+
+
+
+
+
 
 
 
